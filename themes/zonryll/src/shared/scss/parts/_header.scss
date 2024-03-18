@@ -1,0 +1,24 @@
+.site-header {
+	&__header-logo a {
+		text-decoration: none;
+	}
+
+	&__navigation .wp-block-navigation {
+
+		a {
+			text-decoration: none;
+		}
+
+		.wp-block-navigation__container {
+
+			li:hover a,
+			li.current-menu-item a {
+				color: var(--wp--preset--color--primary);
+			}
+		}
+	}
+}
+
+.dark-mode .site-header {
+	background-color: var(--wp--preset--color--contrast);
+}
