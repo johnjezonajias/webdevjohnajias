@@ -130,6 +130,18 @@
 			],
 			"fontSizes": [
 				{
+					"slug": "xx-small",
+					"size": "0.9375rem",
+					"name": "XXS",
+					"fluid": false
+				},
+				{
+					"slug": "x-small",
+					"size": "1rem",
+					"name": "XS",
+					"fluid": false
+				},
+				{
 					"slug": "small",
 					"size": "1.125rem",
 					"name": "Small",
