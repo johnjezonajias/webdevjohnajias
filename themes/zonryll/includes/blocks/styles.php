@@ -45,6 +45,25 @@ function enqueue_block_styles(): void {
  */
 function add_block_styles(): void {
 	register_block_style(
+		'core/button',
+		[
+			'name'         => 'zonryll-export-button',
+			'label'        => __( 'Export Button', 'zonryll' ),
+			'inline_style' => '
+				.wp-block-button.is-style-zonryll-export-button .wp-block-button__link::after {
+					color: var(--wp--preset--color--base);
+					content: "\f56e";
+					font-family: var(--wp--preset--font-family--fontawesome);
+					font-size: 16px;
+				}
+				.wp-block-button.is-style-zonryll-export-button .wp-block-button__link:hover::after {
+					color: var(--wp--preset--color--contrast);
+				}
+			',
+		]
+	);
+
+	register_block_style(
 		'core/group',
 		[
 			'name'  => 'zonryll-box-shadow',

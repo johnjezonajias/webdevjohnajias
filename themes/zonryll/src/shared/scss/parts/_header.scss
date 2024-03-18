@@ -1,4 +1,8 @@
 .site-header {
+	background-color: var(--wp--preset--color--base);
+	position: relative;
+	z-index: 85;
+
 	&__header-logo {
 		a {
 			text-decoration: none;
@@ -36,6 +40,12 @@
 
 .dark-mode .site-header {
 	background-color: var(--wp--preset--color--contrast);
+
+	&__header-logo {
+		a:hover {
+			color: var(--wp--preset--color--primary);
+		}
+	}
 
 	&__navigation .wp-block-navigation .wp-block-navigation__container {
 		li {
