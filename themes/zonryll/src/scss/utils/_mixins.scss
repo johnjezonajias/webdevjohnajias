@@ -1,4 +1,11 @@
 // Media queries
+@mixin media-xs {
+
+	@media (min-width: ($breakpoint-xs + 0.02px)) {
+		@content;
+	}
+}
+
 @mixin media-sm {
 
 	@media (min-width: ($breakpoint-sm + 0.02px)) {

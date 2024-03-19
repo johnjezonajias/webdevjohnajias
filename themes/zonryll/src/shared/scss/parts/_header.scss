@@ -28,14 +28,14 @@
 
 			li {
 				a {
-					font-size: var(--wp--preset--font-size--small);
+					font-size: var(--wp--preset--font-size--x-small);
 					font-weight: 500;
 					padding: 0.4275rem 1.375rem;
 				}
 
 				&:hover a,
 				&.current-menu-item a {
-					background-color: var(--wp--preset--color--shade);
+					color: var(--wp--preset--color--gray);
 				}
 			}
 		}
