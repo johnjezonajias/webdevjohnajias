@@ -1,6 +1,10 @@
 .site-header {
 	background-color: var(--wp--preset--color--base);
-	position: relative;
+	display: inline-block;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
 	z-index: 85;
 
 	&__header-logo {
@@ -39,7 +43,11 @@
 }
 
 .dark-mode .site-header {
-	background-color: var(--wp--preset--color--contrast);
+	background-color: var(--wp--preset--color--transparent);
+
+	&.scrolled {
+		background-color: rgba(3, 3, 3, 0.925);
+	}
 
 	&__header-logo {
 		a:hover {
@@ -56,4 +64,8 @@
 			}
 		}
 	}
+}
+
+.logged-in .site-header {
+	top: 32px;
 }
