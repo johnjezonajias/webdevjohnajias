@@ -20,6 +20,7 @@ function setup(): void {
 	Styles\setup();
 
 	add_action( 'init', __NAMESPACE__ . '\\register_blocks', 0 );
+	add_filter( 'block_categories_all', __NAMESPACE__ . '\\register_block_categories' );
 }
 
 /**
@@ -56,15 +57,11 @@ function register_blocks(): void {
  * @param array $categories Array of block categories.
  * @return array Modified array of block categories.
  */
-function register_categories( $categories ) {
-	return array_merge(
-		$categories,
-		[
-			[
-				'slug'  => 'zonryll',
-				'title' => __( 'Zonryll', 'zonryll' ),
-				'icon'  => 'theme',
-			],
-		]
-	);
+function register_block_categories( array $categories ): array {
+	$categories[] = [
+		'slug'  => 'zonryll',
+		'title' => __( 'Zonryll', 'zonryll' ),
+	];
+
+	return $categories;
 }

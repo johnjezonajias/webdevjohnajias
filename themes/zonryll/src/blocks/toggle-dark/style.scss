@@ -1,0 +1,64 @@
+.toggle-dark-btn {
+	display: inline-block;
+	height: 25px;
+	position: relative;
+	width: 50px;
+
+	input[type="checkbox"] {
+		background-color: var(--wp--preset--color--shade);
+		border-radius: 20px;
+		box-shadow: none;
+		cursor: pointer;
+		height: 100%;
+		position: absolute;
+		transition: all 400ms ease-in-out;
+		margin: 0;
+		outline: none;
+		width: 100%;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		&:checked {
+			background-color: var(--wp--preset--color--primary);
+		}
+	}
+
+	.circle {
+		background-color: var(--wp--preset--color--contrast);
+		border-radius: 50%;
+		height: 25px;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all 400ms ease-in-out;
+		width: 25px;
+
+		&::before {
+			align-items: center;
+			color: var(--wp--preset--color--base);
+			content: '\f185';
+			display: flex;
+			font-family: 'Fontawesome';
+			font-size: 14px;
+			height: 25px;
+			line-height: 1.5;
+			justify-content: center;
+			width: 25px;
+		}
+	}
+
+	input[type="checkbox"]:checked ~ .circle {
+		background-color: var(--wp--preset--color--base);
+		border: 0;
+		left: initial;
+		right: 0;
+
+		&::before {
+			color: var(--wp--preset--color--contrast);
+			content: '\f186';
+		}
+	}
+}

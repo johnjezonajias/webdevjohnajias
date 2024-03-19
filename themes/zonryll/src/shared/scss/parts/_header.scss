@@ -1,0 +1,59 @@
+.site-header {
+	background-color: var(--wp--preset--color--base);
+	position: relative;
+	z-index: 85;
+
+	&__header-logo {
+		a {
+			text-decoration: none;
+		}
+
+		.wp-block-site-title {
+			font-size: var(--wp--preset--font-size--large);
+			font-weight: 700;
+		}
+	}
+
+	&__navigation .wp-block-navigation {
+		a {
+			text-decoration: none;
+		}
+
+		.wp-block-navigation__container {
+			gap: 5px;
+
+			li {
+				a {
+					font-size: var(--wp--preset--font-size--small);
+					font-weight: 500;
+					padding: 0.4275rem 1.375rem;
+				}
+
+				&:hover a,
+				&.current-menu-item a {
+					background-color: var(--wp--preset--color--shade);
+				}
+			}
+		}
+	}
+}
+
+.dark-mode .site-header {
+	background-color: var(--wp--preset--color--contrast);
+
+	&__header-logo {
+		a:hover {
+			color: var(--wp--preset--color--primary);
+		}
+	}
+
+	&__navigation .wp-block-navigation .wp-block-navigation__container {
+		li {
+			&:hover a,
+			&.current-menu-item a {
+				background-color: var(--wp--preset--color--transparent);
+				color: var(--wp--preset--color--primary);
+			}
+		}
+	}
+}
