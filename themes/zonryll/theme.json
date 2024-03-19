@@ -21,6 +21,11 @@
 					"name": "Shade"
 				},
 				{
+					"slug": "gray",
+					"color": "#ababab",
+					"name": "Gray"
+				},
+				{
 					"slug": "primary",
 					"color": "#9fdd2b",
 					"name": "Primary"
@@ -313,6 +318,48 @@
 			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--lust-text)",
+					"fontWeight": "700"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
+					"lineHeight": "1.0434782609"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"lineHeight": "1.0555555556"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--large)",
+					"lineHeight": "1.4285714286"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"lineHeight": "1.1666666667"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"lineHeight": "1.4545454545"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--extra-small)",
+					"lineHeight": "1.3333333333"
+				}
+			},
 			"button": {
 				"spacing": {
 					"padding": {
@@ -356,9 +403,12 @@
 				"color": {
 					"text": "var(--wp--preset--color--contrast)"
 				},
+				"typography": {
+					"textDecoration": "none"
+				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--preset--color--contrast)"
+						"text": "var(--wp--preset--color--gray)"
 					},
 					"typography": {
 						"textDecoration": "none"
@@ -366,12 +416,12 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--preset--color--contrast)"
+						"text": "var(--wp--preset--color--gray)"
 					}
 				},
 				":active": {
 					"color": {
-						"text": "var(--wp--preset--color--contrast)"
+						"text": "var(--wp--preset--color--gray)"
 					}
 				}
 			}
@@ -398,6 +448,11 @@
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"
+		},
+		{
+			"name": "banner",
+			"title": "Banner",
+			"area": "uncategorized"
 		}
 	],
 	"customTemplates": [

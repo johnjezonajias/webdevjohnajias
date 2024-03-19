@@ -5,6 +5,7 @@ body {
 	.wp-site-blocks {
 		& > .wp-block-group {
 			background-color: var(--wp--preset--color--base);
+			margin-top: 0;
 			position: relative;
 			z-index: 80;
 		}
