@@ -22,13 +22,24 @@
 	}
 }
 
-.dark-mode .wp-block-button.is-style-outline {
-	> .wp-block-button__link {
-		border-color: #222;
-		color: var(--wp--preset--color--shade);
+.dark-mode {
+	.wp-block-button__link {
+		background-color: var(--wp--preset--color--primary);
+		color: var(--wp--preset--color--contrast);
 
 		&:hover {
-			border-color: var(--wp--preset--color--shade);
+			background-color: var(--wp--preset--color--base);
+		}
+	}
+
+	.wp-block-button.is-style-outline {
+		> .wp-block-button__link {
+			border-color: #222;
+			color: var(--wp--preset--color--shade);
+
+			&:hover {
+				border-color: var(--wp--preset--color--shade);
+			}
 		}
 	}
 }

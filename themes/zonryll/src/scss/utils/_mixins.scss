@@ -92,7 +92,7 @@
 
 @mixin wp-media-max-sm {
 
-	@media (max-width: $wp-breakpoint-md) {
+	@media (max-width: $wp-breakpoint-sm) {
 		@content;
 	}
 }
