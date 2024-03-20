@@ -1,5 +1,11 @@
+.part-banner {
+	margin-top: 0;
+}
+
 .site-banner {
 	height: 100vh;
+	position: relative;
+	z-index: 60;
 
 	&__contents {
 		max-width: fit-content !important;
