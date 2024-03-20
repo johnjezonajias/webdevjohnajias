@@ -21,6 +21,10 @@
 		.wp-block-site-title {
 			font-size: var(--wp--preset--font-size--xx-large);
 			font-weight: 700;
+
+			@include media-max-lg {
+				font-size: clamp(2.125rem, 1.3512rem + 3.869vw, 3.75rem);
+			}
 		}
 	}
 
