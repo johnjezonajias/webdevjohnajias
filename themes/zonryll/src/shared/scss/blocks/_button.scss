@@ -42,4 +42,8 @@
 			}
 		}
 	}
+
+	.wp-block-button.is-style-zonryll-export-button .wp-block-button__link::after {
+		color: var(--wp--preset--color--contrast);
+	}
 }
