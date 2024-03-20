@@ -1,4 +1,5 @@
 .wp-block-social-links {
+
 	.wp-block-social-link .wp-block-social-link-anchor svg {
 		color: var(--wp--preset--color--contrast);
 		fill: var(--wp--preset--color--contrast);
@@ -6,12 +7,14 @@
 }
 
 .dark-mode .wp-block-social-links .wp-block-social-link {
+
 	.wp-block-social-link-anchor svg {
 		color: var(--wp--preset--color--base);
 		fill: var(--wp--preset--color--base);
 	}
 
 	&:hover {
+
 		.wp-block-social-link-anchor svg {
 			color: var(--wp--preset--color--primary);
 			fill: var(--wp--preset--color--primary);

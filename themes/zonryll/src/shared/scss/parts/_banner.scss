@@ -15,6 +15,7 @@
 		&--top {
 
 			p {
+
 				@include media-max-md {
 					font-size: 0.813rem !important;
 				}
@@ -54,6 +55,7 @@
 	}
 
 	.wp-block-cover__inner-container {
+
 		@include media-max-lg {
 			padding-left: 0 !important;
 			padding-right: 0 !important;

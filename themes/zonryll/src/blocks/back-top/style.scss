@@ -4,7 +4,7 @@
 	bottom: 4em;
 	display: none;
 	position: fixed;
-    right: 0;
+	right: 0;
 	z-index: 101;
 
 	@include wp-media-max-md {
@@ -32,9 +32,9 @@
 		}
 
 		&::before {
-			content: '\f062';
+			content: "\f062";
 			display: inline-block;
-			font-family: 'Fontawesome';
+			font-family: Fontawesome, sans-serif;
 			height: 25px;
 			line-height: 1.5;
 			width: 25px;
@@ -48,6 +48,7 @@
 }
 
 .dark-mode .back-to-top {
+
 	&__button {
 		background-color: var(--wp--preset--color--base);
 		color: var(--wp--preset--color--contrast);

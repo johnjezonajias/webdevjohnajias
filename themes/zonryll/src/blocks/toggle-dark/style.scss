@@ -39,9 +39,9 @@
 		&::before {
 			align-items: center;
 			color: var(--wp--preset--color--base);
-			content: '\f185';
+			content: "\f185";
 			display: flex;
-			font-family: 'Fontawesome';
+			font-family: Fontawesome, sans-serif;
 			font-size: 14px;
 			height: 25px;
 			line-height: 1.5;
@@ -58,7 +58,7 @@
 
 		&::before {
 			color: var(--wp--preset--color--contrast);
-			content: '\f186';
+			content: "\f186";
 		}
 	}
 }

@@ -118,7 +118,6 @@
 					]
 				},
 				{
-					"name": "Fontawesome",
 					"slug": "fontawesome",
 					"fontFamily": "\"Fontawesome\", var(--wp--preset--font-family--system)",
 					"fontFace": [
