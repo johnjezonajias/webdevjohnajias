@@ -1,4 +1,11 @@
 // Media queries
+@mixin media-xs {
+
+	@media (min-width: ($breakpoint-xs + 0.02px)) {
+		@content;
+	}
+}
+
 @mixin media-sm {
 
 	@media (min-width: ($breakpoint-sm + 0.02px)) {
@@ -85,7 +92,7 @@
 
 @mixin wp-media-max-sm {
 
-	@media (max-width: $wp-breakpoint-md) {
+	@media (max-width: $wp-breakpoint-sm) {
 		@content;
 	}
 }

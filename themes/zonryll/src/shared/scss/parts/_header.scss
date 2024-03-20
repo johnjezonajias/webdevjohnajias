@@ -1,7 +1,42 @@
 .site-header {
-	background-color: var(--wp--preset--color--base);
-	position: relative;
+	background-color: var(--wp--preset--color--transparent);
+	display: inline-block;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
 	z-index: 85;
+
+	&.scrolled {
+		background-color: var(--wp--preset--color--base);
+	}
+
+	&__columns {
+		padding-bottom: 1em;
+		padding-top: 1em;
+
+		@include media-md {
+			padding-bottom: 1.125em;
+			padding-top: 1.125em;
+		}
+
+		@include media-xl {
+			padding-bottom: 2em;
+			padding-top: 2em;
+		}
+
+		&--left {
+			@include media-max-lg {
+				flex-basis: 75vw !important;
+			}
+		}
+
+		&--right {
+			@include media-max-lg {
+				flex-basis: 25vw !important;
+			}
+		}
+	}
 
 	&__header-logo {
 		a {
@@ -9,37 +44,116 @@
 		}
 
 		.wp-block-site-title {
-			font-size: var(--wp--preset--font-size--large);
+			font-size: var(--wp--preset--font-size--medium);
 			font-weight: 700;
+
+			@include media-xs {
+				font-size: var(--wp--preset--font-size--large);
+			}
 		}
 	}
 
-	&__navigation .wp-block-navigation {
-		a {
-			text-decoration: none;
+	&__navigation {
+		@include media-max-lg {
+			gap: var(--wp--preset--spacing--40) !important;
 		}
 
-		.wp-block-navigation__container {
-			gap: 5px;
+		.wp-block-navigation {
+			a {
+				text-decoration: none;
+			}
 
-			li {
-				a {
-					font-size: var(--wp--preset--font-size--small);
-					font-weight: 500;
-					padding: 0.4275rem 1.375rem;
+			.wp-block-navigation__responsive-container-open {
+				display: flex;
+
+				@include media-lg {
+					display: none;
+				}
+			}
+
+			.wp-block-navigation__responsive-container {
+				display: none;
+
+				&.is-menu-open {
+					display: flex;
+
+					.wp-block-navigation__container li a {
+						color: var(--wp--preset--color--contrast);
+						font-size: var(--wp--preset--font-size--medium);
+						font-weight: 700;
+						text-transform: uppercase;
+						transition: all 400ms ease-in-out;
+
+						&:hover {
+							transform: scale(1.25);
+						}
+
+						@include media-sm {
+							font-size: var(--wp--preset--font-size--large);
+						}
+
+						@include media-md {
+							font-size: var(--wp--preset--font-size--x-large);
+						}
+					}
+
+					.wp-block-navigation__responsive-close {
+						height: 100vh;
+					}
+
+					.wp-block-navigation__responsive-dialog {
+						display: flex;
+						align-items: center;
+						height: 100%;
+						justify-content: center;
+					}
 				}
 
-				&:hover a,
-				&.current-menu-item a {
-					background-color: var(--wp--preset--color--shade);
+				&-content {
+					padding-top: 0;
+				}
+
+				@include media-lg {
+					display: block;
+				}
+			}
+
+			.wp-block-navigation__container {
+				gap: 5px;
+
+				li {
+					a {
+						font-size: var(--wp--preset--font-size--x-small);
+						font-weight: 500;
+						padding: 0.4275rem 1.375rem;
+
+						@include media-max-lg {
+							padding-left: 1.125rem;
+							padding-right: 1.125rem;
+						}
+					}
+
+					&:hover a,
+					&.current-menu-item a {
+						color: var(--wp--preset--color--gray);
+					}
 				}
 			}
 		}
 	}
+
+	&:where(:not(.scrolled)) &__header-logo,
+	&:where(:not(.scrolled)) .wp-block-navigation .wp-block-navigation__responsive-container-open,
+	&:where(:not(.scrolled)) &__navigation .wp-block-navigation .wp-block-navigation__container li a {
+		color: var(--wp--preset--color--base);
+	}
 }
 
 .dark-mode .site-header {
-	background-color: var(--wp--preset--color--contrast);
+
+	&.scrolled {
+		background-color: rgba(3, 3, 3, 0.825);
+	}
 
 	&__header-logo {
 		a:hover {
@@ -47,13 +161,36 @@
 		}
 	}
 
-	&__navigation .wp-block-navigation .wp-block-navigation__container {
-		li {
-			&:hover a,
-			&.current-menu-item a {
-				background-color: var(--wp--preset--color--transparent);
-				color: var(--wp--preset--color--primary);
+	&__navigation .wp-block-navigation {
+		.wp-block-navigation__container {
+			li {
+				&:hover a,
+				&.current-menu-item a {
+					color: var(--wp--preset--color--primary);
+				}
 			}
 		}
+
+		.wp-block-navigation__responsive-container {
+			&.is-menu-open {
+				background-color: var(--wp--preset--color--contrast);
+			}
+
+			&-close {
+				color: var(--wp--preset--color--base);
+			}
+
+			&.is-menu-open .wp-block-navigation__container li a {
+				color: var(--wp--preset--color--base);
+			}
+		}
+	}
+}
+
+.logged-in .site-header {
+	top: 32px;
+
+	@include wp-media-max-md {
+		top: 46px;
 	}
 }

@@ -1,0 +1,62 @@
+.part-banner {
+	margin-top: 0;
+}
+
+.site-banner {
+	height: 100vh;
+	position: relative;
+	z-index: 60;
+
+	&__contents {
+		max-width: fit-content !important;
+		min-width: fit-content;
+		width: auto;
+
+		&--top {
+
+			p {
+				@include media-max-md {
+					font-size: 0.813rem !important;
+				}
+
+				@include media-max-sm {
+					font-size: 0.625rem !important;
+				}
+			}
+		}
+
+		&--bottom {
+			letter-spacing: -0.1524rem;
+			margin-top: 0;
+
+			h1,
+			p {
+				line-height: 0.75;
+				white-space: nowrap;
+
+				@include media-sm {
+					letter-spacing: -0.235rem;
+				}
+
+				@include media-md {
+					letter-spacing: -0.3465rem;
+				}
+
+				@include media-lg {
+					letter-spacing: -0.4785rem;
+				}
+
+				@include media-max-lg {
+					font-size: clamp(2.25rem, -0.1905rem + 12.2024vw, 7.375rem) !important;
+				}
+			}
+		}
+	}
+
+	.wp-block-cover__inner-container {
+		@include media-max-lg {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
+}
