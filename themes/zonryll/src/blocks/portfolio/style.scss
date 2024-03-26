@@ -1,0 +1,8 @@
+@import "../../scss/utils/utils";
+
+.portfolio {
+	flex-shrink: 0;
+  	width: clamp(500px, 60vw, 800px);
+}
+
+.dark-mode .portfolio {}
