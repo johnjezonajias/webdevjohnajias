@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zonryll/tech-stack",
+	"version": "0.1.0",
+	"title": "Tech Stack",
+	"category": "zonryll",
+	"icon": "index-card",
+	"description": "Set stack to the tech stacks block.",
+	"parent": [ "zonryll/tech-stacks" ],
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "zonryll",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

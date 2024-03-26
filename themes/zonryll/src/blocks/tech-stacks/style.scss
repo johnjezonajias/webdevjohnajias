@@ -1,0 +1,85 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../scss/utils/utils";
+
+.tech-stacks {
+	background-color: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--base);
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+
+	&__panel {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+		z-index:3;
+
+		&--content {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: center;
+			max-width: var(--wp--style--global--content-size);
+			width: 100%;
+		}
+	}
+
+	&__portfolio {
+		background: var(--wp--preset--color--base);
+		bottom: -100%;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 1;
+
+		&--content {
+			align-items: normal;
+			column-gap: 2rem;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			row-gap: 2rem;
+		}
+	}
+
+	.wp-block-button.is-style-outline>.wp-block-button__link {
+		&:hover,
+		&:focus {
+			background-color: var(--wp--preset--color--base);
+			color: var(--wp--preset--color--contrast);
+		}
+	}
+}
+
+.dark-mode .tech-stacks {
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+
+	.wp-block-button.is-style-outline>.wp-block-button__link {
+		border-color: var(--wp--preset--color--contrast);
+		color: var(--wp--preset--color--contrast);
+
+		&:hover,
+		&:focus {
+			background-color: var(--wp--preset--color--contrast);
+			color: var(--wp--preset--color--base);
+		}
+	}
+
+	&__portfolio {
+		background: var(--wp--preset--color--contrast);
+	}
+}
