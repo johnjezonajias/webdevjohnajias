@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zonryll/experience",
+	"version": "0.1.0",
+	"title": "Experience",
+	"category": "zonryll",
+	"icon": "index-card",
+	"description": "Set experience to the experiences block.",
+	"parent": [ "zonryll/experiences" ],
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"position": {
+			"type": "string",
+			"default": ""
+		},
+		"tenures": {
+			"type": "string",
+			"default": ""
+		},
+		"role": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"allowedBlocks": [],
+	"textdomain": "zonryll",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

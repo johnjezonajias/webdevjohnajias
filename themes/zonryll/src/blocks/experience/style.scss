@@ -1,0 +1,46 @@
+@import "../../scss/utils/utils";
+
+.experience {
+	align-items: normal;
+	display: flex;
+
+	&__card {
+		background-color: var(--wp--preset--color--contrast);
+		border-radius: 15px;
+		color: var(--wp--preset--color--base);
+		display: inline-block;
+		font-size: var(--wp--preset--font-size--x-small);
+		padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--50);
+		width: 100%;
+
+		h5 {
+			font-weight: 600;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		h6 {
+			font-weight: 500;
+			letter-spacing: 0.01285rem;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		&--date {
+			font-weight: 300;
+			margin-top: 0;
+		}
+
+		&--description {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.dark-mode .experience {
+
+	&__card {
+		background-color: var(--wp--preset--color--base);
+		color: var(--wp--preset--color--contrast);
+	}
+}
