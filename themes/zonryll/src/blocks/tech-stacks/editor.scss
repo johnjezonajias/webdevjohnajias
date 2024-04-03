@@ -13,5 +13,9 @@
 		padding-top: var(--wp--preset--spacing--50);
 		position: relative;
 		z-index: 5;
+
+		h6 {
+			margin: 0;
+		}
 	}
 }

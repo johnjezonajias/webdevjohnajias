@@ -61,6 +61,14 @@ export default function Edit( { attributes, setAttributes } ) {
 				<div className="tech-stacks__portfolio--content">
 					{ children }
 					<InnerBlocks.ButtonBlockAppender />
+					<div className="wp-block-button is-style-outline">
+						<button
+							className="wp-block-button__link wp-element-button trigger"
+							data-toggle="closed"
+						>
+							Go back
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

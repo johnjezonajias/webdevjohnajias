@@ -319,7 +319,7 @@
 		"elements": {
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--lust-text)",
+					"fontFamily": "var(--wp--preset--font-family--quicksand)",
 					"fontWeight": "700"
 				}
 			},
@@ -355,7 +355,7 @@
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--extra-small)",
+					"fontSize": "var(--wp--preset--font-size--x-small)",
 					"lineHeight": "1.3333333333"
 				}
 			},

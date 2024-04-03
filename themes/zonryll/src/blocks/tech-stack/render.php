@@ -19,6 +19,6 @@ if ( ! $attributes['title'] ) {
 				echo $inner_block->render();
 			}
 		?>
-		<h5><?php echo $attributes['title']; ?></h5>
+		<h6><?php echo $attributes['title']; ?></h6>
 	</div>
 </div>

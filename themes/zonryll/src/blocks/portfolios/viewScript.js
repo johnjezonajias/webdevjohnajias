@@ -10,7 +10,7 @@ domReady( () => {
 	const images = gsap.utils.toArray( '.portfolios img' );
 
 	const showPortfolios = () => {
-		//document.scrollingElement.scrollTo( 0, 0 );
+		document.scrollingElement.scrollTo( 0, 0 );
 
 		gsap.utils.toArray( '.portfolios' ).forEach( ( portfolios, index ) => {
 			const portfoliosWrapper = portfolios.querySelector(
@@ -35,7 +35,7 @@ domReady( () => {
 						trigger: portfolios,
 						scrub: 1,
 						invalidateOnRefresh: true,
-						markers: true,
+						markers: false,
 					},
 				}
 			);

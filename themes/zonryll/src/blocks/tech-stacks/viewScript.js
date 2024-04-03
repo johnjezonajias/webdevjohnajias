@@ -102,7 +102,7 @@ const ITEManimate = {
 					onComplete() {
 						gsap.to( sceneContainer, {
 							duration: 0.8,
-							height: '100vh',
+							height: '100%',
 							top: '0',
 							width: '100%',
 							left: '0',
@@ -129,12 +129,12 @@ const ITEManimate = {
 				}
 			} );
 
-			$( window ).on( 'scroll', function () {
+			/* $( window ).on( 'scroll', function () {
 				if ( isOpen ) {
 					closeAnimation();
 					isOpen = false;
 				}
-			} );
+			} ); */
 		},
 	};
 

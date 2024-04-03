@@ -25,7 +25,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		<div { ...useBlockProps( { className: 'tech-stack' } ) }>
 			<div className="tech-stack__card">
 				<InnerBlocks />
-				<h5>
+				<h6>
 					<RichText
 						tagName="span"
 						allowedFormats={ [] }
@@ -34,7 +34,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						formattingControls={ [] }
 						placeholder="Title"
 					/>
-				</h5>
+				</h6>
 			</div>
 		</div>
 	);

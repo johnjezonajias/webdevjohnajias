@@ -34,6 +34,14 @@ export default function Save( { attributes } ) {
 			<div className="tech-stacks__portfolio is-layout-constrained">
 				<div className="tech-stacks__portfolio--content">
 					<InnerBlocks.Content />
+					<div className="wp-block-button is-style-outline">
+						<button
+							className="wp-block-button__link wp-element-button trigger"
+							data-toggle="closed"
+						>
+							Go back
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

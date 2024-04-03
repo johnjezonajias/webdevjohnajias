@@ -2,15 +2,11 @@
 	background-color: var(--wp--preset--color--transparent);
 	display: inline-block;
 	left: 0;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	transition: background-color 0.25s ease-in-out;
 	width: 100%;
 	z-index: 85;
-
-	&.scrolled {
-		background-color: var(--wp--preset--color--base);
-	}
 
 	&__columns {
 		padding-bottom: 1em;
@@ -157,11 +153,6 @@
 }
 
 .dark-mode .site-header {
-
-	&.scrolled {
-		background-color: rgba(3, 3, 3, 0.825);
-	}
-
 	&__header-logo {
 
 		a:hover {

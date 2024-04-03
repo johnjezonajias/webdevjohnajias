@@ -8,7 +8,11 @@
 	justify-content: center;
 	padding: var(--wp--preset--spacing--50) var(--wp--preset--spacing--50);
 	text-align: center;
-	width: 10vw;
+	width: 42vw;
+
+	@include media-lg {
+		width: 10vw;
+	}
 
 	&__card {
 		align-items: center;
@@ -18,7 +22,9 @@
 		justify-content: center;
 		row-gap: 1rem;
 
-		h5 {
+		h6 {
+			font-weight: 500;
+			line-height: 1.15;
 			margin: 0;
 		}
 
@@ -36,13 +42,13 @@
 			}
 
 			svg {
-				width: 50%;
+				width: 40%;
 
 				@include wp-media-max-md {
 					display: table;
 					margin-left: auto;
 					margin-right: auto;
-					width: 30%;
+					width: 25%;
 				}
 			}
 		}
