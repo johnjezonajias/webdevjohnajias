@@ -2,12 +2,16 @@
 
 .experience {
 	align-items: normal;
+	background-color: var(--wp--preset--color--contrast);
+	border-radius: 15px;
+	color: var(--wp--preset--color--base);
 	display: flex;
 
-	&__card {
-		background-color: var(--wp--preset--color--contrast);
-		border-radius: 15px;
+	a {
 		color: var(--wp--preset--color--base);
+	}
+
+	&__card {
 		display: inline-block;
 		font-size: var(--wp--preset--font-size--x-small);
 		padding: var(--wp--preset--spacing--60) var(--wp--preset--spacing--50);
@@ -38,9 +42,10 @@
 }
 
 .dark-mode .experience {
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
 
-	&__card {
-		background-color: var(--wp--preset--color--base);
+	a {
 		color: var(--wp--preset--color--contrast);
 	}
 }

@@ -12,7 +12,21 @@
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 1.785rem;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 1rem;
+
+		@include media-sm {
+			grid-gap: 1.25rem;
+		}
+
+		@include media-md {
+			grid-gap: 1.5rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-lg {
+			grid-gap: 1.625rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 }

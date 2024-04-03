@@ -1,7 +1,10 @@
+/* eslint-disable no-duplicate-imports */
 /**
  * WordPress dependencies.
  */
-import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { InspectorControls } from '@wordpress/block-editor';
+import { TextControl, PanelBody } from '@wordpress/components';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -15,8 +18,18 @@ import { useBlockProps, RichText, InnerBlocks } from '@wordpress/block-editor';
 export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<div { ...useBlockProps( { className: 'experience' } ) }>
+			<InspectorControls>
+				<PanelBody title="Experience Settings">
+					<TextControl
+						label="Company Site Link"
+						value={ attributes.companySiteLink }
+						onChange={ ( value ) =>
+							setAttributes( { companySiteLink: value } )
+						}
+					/>
+				</PanelBody>
+			</InspectorControls>
 			<div className="experience__card">
-				<InnerBlocks />
 				<h5>
 					<RichText
 						tagName="span"
