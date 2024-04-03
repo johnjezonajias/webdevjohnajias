@@ -2,7 +2,15 @@
 
 .portfolio {
 	flex-shrink: 0;
-  	width: clamp(500px, 60vw, 800px);
+  	width: clamp(200px, 60vw, 600px);
+
+	&__card {
+		box-shadow: var(--wp-preset-shadow--natural);
+
+		figure {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .dark-mode .portfolio {}

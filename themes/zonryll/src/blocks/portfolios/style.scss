@@ -10,8 +10,36 @@
 .portfolios {
 	overflow-x: hidden;
 
+	+ .portfolios {
+		margin-top: 1rem;
+
+		@include media-sm {
+			margin-top: 1.5rem;
+		}
+
+		@include media-lg {
+			margin-top: 2rem;
+		}
+
+		@include media-xl {
+			margin-top: 2.75rem;
+		}
+	}
+
 	&__wrapper {
 		display: flex;
-		gap: 4rem;
+		gap: 1rem;
+
+		@include media-sm {
+			gap: 1.5rem;
+		}
+
+		@include media-lg {
+			gap: 2rem;
+		}
+
+		@include media-xl {
+			gap: 2.75rem;
+		}
 	}
 }
