@@ -9,21 +9,19 @@
 
 .portfolios {
 	overflow-x: hidden;
+	margin-top: 0;
+	padding-bottom: 1rem;
 
-	+ .portfolios {
-		margin-top: 1rem;
+	@include media-sm {
+		padding-bottom: 1.5rem;
+	}
 
-		@include media-sm {
-			margin-top: 1.5rem;
-		}
+	@include media-lg {
+		padding-bottom: 2rem;
+	}
 
-		@include media-lg {
-			margin-top: 2rem;
-		}
-
-		@include media-xl {
-			margin-top: 2.75rem;
-		}
+	@include media-xl {
+		padding-bottom: 2.75rem;
 	}
 
 	&__wrapper {
