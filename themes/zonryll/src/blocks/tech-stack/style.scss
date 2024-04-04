@@ -8,11 +8,7 @@
 	justify-content: center;
 	padding: var(--wp--preset--spacing--50) var(--wp--preset--spacing--50);
 	text-align: center;
-	width: 42vw;
-
-	@include media-lg {
-		width: 10vw;
-	}
+	width: 100%;
 
 	&__card {
 		align-items: center;

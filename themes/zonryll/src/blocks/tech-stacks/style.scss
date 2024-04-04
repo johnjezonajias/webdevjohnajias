@@ -24,6 +24,10 @@
 		width: 100%;
 		z-index:3;
 
+		h2 {
+			margin-top: 0;
+		}
+
 		&--content {
 			align-items: center;
 			display: flex;
@@ -48,21 +52,28 @@
 		z-index: 1;
 
 		&--content {
-			align-items: normal;
-			column-gap: 0.875rem;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			max-width: 1600px !important;
-			row-gap: 0.875rem;
+			display: grid;
+			grid-gap: 0.5rem;
+			grid-template-columns: repeat(3, 1fr);
 
 			@include media-lg {
-				column-gap: 1.125rem;
-				row-gap: 1.125rem;
+				grid-gap: 0.625rem;
+				grid-template-columns: repeat(4, 1fr);
+			}
+
+			@include media-xl {
+				grid-gap: 0.75rem;
+				grid-template-columns: repeat(5, 1fr);
+			}
+
+			@include media-xxl {
+				grid-gap: 0.875rem;
+				grid-template-columns: repeat(6, 1fr);
 			}
 
 			.wp-block-button {
 				display: flex;
+				grid-column: 1 / -1;
 				justify-content: center;
 				width: 100%;
 			}
