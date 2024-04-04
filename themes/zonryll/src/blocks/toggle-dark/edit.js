@@ -4,14 +4,6 @@
 import { useEffect } from '@wordpress/element';
 import ServerSideRender from '@wordpress/server-side-render';
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './editor.scss';
-
 const LoadingResponsePlaceholder = ( { children } ) => {
 	useEffect( () => {
 		return () => {

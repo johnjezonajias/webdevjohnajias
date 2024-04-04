@@ -6,11 +6,12 @@
 	justify-content: center;
 
 	svg {
-		fill: currentColor;
+		fill: currentcolor;
 	}
 }
 
 .wp-block-button.is-style-outline {
+
 	> .wp-block-button__link {
 		border-width: 1px;
 		padding: 0.5625rem 1.875rem;
@@ -23,6 +24,7 @@
 }
 
 .dark-mode {
+
 	.wp-block-button__link {
 		background-color: var(--wp--preset--color--primary);
 		color: var(--wp--preset--color--contrast);
@@ -33,6 +35,7 @@
 	}
 
 	.wp-block-button.is-style-outline {
+
 		> .wp-block-button__link {
 			border-color: #222;
 			color: var(--wp--preset--color--shade);
@@ -41,5 +44,9 @@
 				border-color: var(--wp--preset--color--shade);
 			}
 		}
+	}
+
+	.wp-block-button.is-style-zonryll-export-button .wp-block-button__link::after {
+		color: var(--wp--preset--color--contrast);
 	}
 }

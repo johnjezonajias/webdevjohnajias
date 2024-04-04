@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zonryll/portfolio",
+	"version": "0.1.0",
+	"title": "Portfolio",
+	"category": "zonryll",
+	"icon": "index-card",
+	"description": "Set portfolio to the portfolios block.",
+	"parent": [ "zonryll/portfolios" ],
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "zonryll",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

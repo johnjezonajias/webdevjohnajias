@@ -1,0 +1,60 @@
+@import "../../scss/utils/utils";
+
+.back-to-top {
+	bottom: 4em;
+	display: none;
+	position: fixed;
+	right: 0;
+	z-index: 101;
+
+	@include wp-media-max-md {
+		bottom: 1.25em;
+	}
+
+	&__button {
+		align-items: center;
+		background-color: var(--wp--preset--color--contrast);
+		border: 0;
+		border-bottom-left-radius: 50%;
+		border-top-left-radius: 50%;
+		color: var(--wp--preset--color--base);
+		cursor: pointer;
+		display: flex;
+		font-size: 0.875rem;
+		height: 35px;
+		justify-content: center;
+		width: 35px;
+
+		@include media-lg {
+			font-size: 1rem;
+			height: 45px;
+			width: 45px;
+		}
+
+		&::before {
+			content: "\f062";
+			display: inline-block;
+			font-family: Fontawesome, sans-serif;
+			height: 25px;
+			line-height: 1.5;
+			width: 25px;
+		}
+
+		&:hover {
+			background-color: var(--wp--preset--color--shade);
+			color: var(--wp--preset--color--contrast);
+		}
+	}
+}
+
+.dark-mode .back-to-top {
+
+	&__button {
+		background-color: var(--wp--preset--color--base);
+		color: var(--wp--preset--color--contrast);
+
+		&:hover {
+			background-color: var(--wp--preset--color--shade);
+		}
+	}
+}

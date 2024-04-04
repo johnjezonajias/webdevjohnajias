@@ -1,14 +1,42 @@
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+	pointer-events: none;
+}
+
 body {
 	background-color: var(--wp--preset--color--base);
 	color: var(--wp--preset--color--black);
 
 	.wp-site-blocks {
-		& > .wp-block-group {
+
+		> .wp-block-group {
 			background-color: var(--wp--preset--color--base);
 			margin-top: 0;
 			position: relative;
 			z-index: 80;
 		}
+	}
+
+	&:where(:not(.editor-styles-wrapper)) .animated {
+		opacity: 0;
+		visibility: hidden;
+		will-change: transform, opacity;
 	}
 }
 
@@ -17,7 +45,8 @@ body.dark-mode {
 	color: var(--wp--preset--color--base);
 
 	.wp-site-blocks {
-		& > .wp-block-group {
+
+		> .wp-block-group {
 			background-color: var(--wp--preset--color--contrast);
 		}
 	}

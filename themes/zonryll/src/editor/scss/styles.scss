@@ -1,3 +1,5 @@
+@import "../../scss/utils/utils";
+
 body {
 	--wp--preset--spacing--1xs: calc(1rem * var(--zonryll--base--spacing-1));
 	--wp--preset--spacing--1sm: calc(1.25rem * var(--zonryll--base--spacing-1));
@@ -39,4 +41,19 @@ body {
 	--wp--preset--spacing--10sm: calc(10.25rem * var(--zonryll--base--spacing-10));
 	--wp--preset--spacing--10md: calc(10.5rem * var(--zonryll--base--spacing-10));
 	--wp--preset--spacing--10lg: calc(10.75rem * var(--zonryll--base--spacing-10));
+}
+
+.editor-styles-wrapper {
+
+	.site-header {
+
+		.wp-block-site-title a {
+			color: var(--wp--preset--color--contrast);
+		}
+
+		&__navigation .wp-block-navigation a {
+			padding-left: var(--wp--preset--spacing--1sm);
+			padding-right: var(--wp--preset--spacing--1sm);
+		}
+	}
 }

@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "zonryll/scroll-progress",
+	"version": "0.1.0",
+	"title": "Scroll Progress Bar",
+	"category": "zonryll",
+	"icon": "index-card",
+	"attributes": {
+		"targetId": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "zonryll",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./viewScript.js",
+	"render": "file:./render.php"
+}

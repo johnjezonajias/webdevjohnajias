@@ -1,0 +1,32 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../scss/utils/utils";
+
+.experiences {
+	overflow-x: hidden;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 1rem;
+
+		@include media-sm {
+			grid-gap: 1.25rem;
+		}
+
+		@include media-md {
+			grid-gap: 1.5rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-lg {
+			grid-gap: 1.625rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

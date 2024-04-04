@@ -1,0 +1,34 @@
+@import "../../scss/utils/utils";
+
+.scroll-progress {
+	background-color: var(--wp--preset--color--shade);
+	bottom: 0;
+	border-radius: 5px;
+	height: 200px;
+	left: 1.5em;
+	margin: auto 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 4px;
+	z-index: 102;
+
+	@include wp-media-max-md {
+		left: 0.5em;
+	}
+
+	&__indicator {
+		background-color: var(--wp--preset--color--contrast);
+		border-radius: 5px;
+		height: 0;
+		width: 100%;
+	}
+}
+
+.dark-mode .scroll-progress {
+	background-color: var(--wp--preset--color--base);
+
+	&__indicator {
+		background-color: var(--wp--preset--color--primary);
+	}
+}
