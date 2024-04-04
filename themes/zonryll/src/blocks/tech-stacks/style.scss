@@ -8,7 +8,8 @@
 	position: relative;
 	text-align: center;
 
-	.wp-block-button.is-style-outline>.wp-block-button__link {
+	.wp-block-button.is-style-outline > .wp-block-button__link {
+
 		&:hover,
 		&:focus {
 			background-color: var(--wp--preset--color--base);
@@ -22,7 +23,7 @@
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		z-index:3;
+		z-index: 3;
 
 		h2 {
 			margin-top: 0;
@@ -82,7 +83,7 @@
 		.wp-block-button {
 			margin-top: var(--wp--preset--spacing--50);
 
-			&.is-style-outline>.wp-block-button__link {
+			&.is-style-outline > .wp-block-button__link {
 				border-color: var(--wp--preset--color--contrast);
 				color: var(--wp--preset--color--contrast);
 
@@ -100,7 +101,7 @@
 .dark-mode .tech-stacks {
 	color: var(--wp--preset--color--contrast);
 
-	.wp-block-button.is-style-outline>.wp-block-button__link {
+	.wp-block-button.is-style-outline > .wp-block-button__link {
 		border-color: var(--wp--preset--color--contrast);
 		color: var(--wp--preset--color--contrast);
 
@@ -118,7 +119,7 @@
 	&__portfolio {
 		background: var(--wp--preset--color--contrast);
 
-		.wp-block-button.is-style-outline>.wp-block-button__link {
+		.wp-block-button.is-style-outline > .wp-block-button__link {
 			border-color: var(--wp--preset--color--shade);
 			color: var(--wp--preset--color--base);
 

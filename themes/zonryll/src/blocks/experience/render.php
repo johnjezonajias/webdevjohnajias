@@ -12,15 +12,15 @@ if ( ! $attributes['title'] ) {
 }
 
 ?>
-<div <?php echo get_block_wrapper_attributes( [ 'class' => 'experience' ] ); ?>>
+<div <?php echo esc_attr( get_block_wrapper_attributes( [ 'class' => 'experience' ] ) ); ?>>
 	<?php if ( ! empty( $attributes['companySiteLink'] ) ) : ?>
 		<a href="<?php echo esc_url( $attributes['companySiteLink'] ); ?>" target="_blank">
 	<?php endif; ?>
 		<div class="experience__card">
-			<h5><?php echo $attributes['title']; ?></h5>
-			<h6><?php echo $attributes['position']; ?></h6>
-			<p class="experience__card--date"><?php echo $attributes['tenures']; ?></p>
-			<p class="experience__card--description"><?php echo $attributes['role']; ?></p>
+			<h5><?php echo esc_html( $attributes['title'] ); ?></h5>
+			<h6><?php echo esc_html( $attributes['position'] ); ?></h6>
+			<p class="experience__card--date"><?php echo esc_html( $attributes['tenures'] ); ?></p>
+			<p class="experience__card--description"><?php echo esc_html( $attributes['role'] ); ?></p>
 		</div>
 	<?php if ( ! empty( $attributes['companySiteLink'] ) ) : ?>
 		</a>

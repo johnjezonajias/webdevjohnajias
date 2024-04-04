@@ -48,6 +48,7 @@ const ITEManimate = {
 	const w = $( window );
 
 	const animationTrigger = $( '.trigger' );
+	const parentContainer = $( '.tech-stacks' );
 	const sceneContainer = $( '.tech-stacks__panel' );
 	const portfolioContainer = $( '.tech-stacks__portfolio' );
 
