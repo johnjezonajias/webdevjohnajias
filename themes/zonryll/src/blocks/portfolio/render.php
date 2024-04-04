@@ -12,11 +12,19 @@ if ( ! $attributes['title'] ) {
 }
 
 ?>
-<div <?php echo esc_attr( get_block_wrapper_attributes( [ 'class' => 'portfolio' ] ) ); ?>>
+<div
+<?php
+	// phpcs:disable
+	echo get_block_wrapper_attributes( [ 'class' => 'portfolio' ] );
+	// phpcs:enable
+?>
+>
 	<div class="portfolio__card">
 		<?php
 		foreach ( $block->inner_blocks as $inner_block ) {
-			echo wp_kses_post( $inner_block->render() );
+			// phpcs:disable
+			echo $inner_block->render();
+			// phpcs:enable
 		}
 		?>
 	</div>

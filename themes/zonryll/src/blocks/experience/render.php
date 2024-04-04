@@ -12,7 +12,13 @@ if ( ! $attributes['title'] ) {
 }
 
 ?>
-<div <?php echo esc_attr( get_block_wrapper_attributes( [ 'class' => 'experience' ] ) ); ?>>
+<div
+<?php
+	// phpcs:disable
+	echo get_block_wrapper_attributes( [ 'class' => 'experience' ] );
+	// phpcs:enable
+?>
+>
 	<?php if ( ! empty( $attributes['companySiteLink'] ) ) : ?>
 		<a href="<?php echo esc_url( $attributes['companySiteLink'] ); ?>" target="_blank">
 	<?php endif; ?>

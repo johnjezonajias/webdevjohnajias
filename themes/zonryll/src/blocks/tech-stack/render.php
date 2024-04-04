@@ -12,11 +12,19 @@ if ( ! $attributes['title'] ) {
 }
 
 ?>
-<div <?php echo esc_attr( get_block_wrapper_attributes( [ 'class' => 'tech-stack' ] ) ); ?>>
+<div
+<?php
+	// phpcs:disable
+	echo get_block_wrapper_attributes( [ 'class' => 'tech-stack' ] );
+	// phpcs:enable
+?>
+>
 	<div class="tech-stack__card">
 		<?php
 		foreach ( $block->inner_blocks as $inner_block ) {
-			echo wp_kses_post( $inner_block->render() );
+			// phpcs:disable
+			echo $inner_block->render();
+			// phpcs:enable
 		}
 		?>
 		<h6><?php echo esc_html( $attributes['title'] ); ?></h6>
